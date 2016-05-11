@@ -1,3 +1,3 @@
-public class Voter extends Person{
+public class Voter extends Entity{
 
 }

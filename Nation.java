@@ -1,8 +1,7 @@
 public class Nation{
 	
-	public Voters[] populace;
-	public Politicians[] canidates;
-	
+	public Voter[] populace;
+	public Party[] parties;
 	
 	
 }
