@@ -1,0 +1,3 @@
+public Politician extends Person{
+
+}
