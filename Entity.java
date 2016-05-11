@@ -4,5 +4,5 @@ public class Entity{
 	public ArrayList<Opinion> views; //a list of opinions
 	
 
-
+	
 }
