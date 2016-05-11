@@ -9,6 +9,11 @@ public class Nation{
 		this.parties = new Party[partyCount];
 		this.issues = new Issue[issueCount];
 		
+		for(int i = 0; i < issueCount; i++){
+			issues[i] = new Issue();
+		}
+		
+		
 		for(int i = 0; i < population; i++){
 			populace[i] = new Voter();
 		}
@@ -16,10 +21,7 @@ public class Nation{
 		for(int i = 0; i < partCount; i++){
 			parties[i] = new Party();
 		}	
-		
-		for(int i = 0; i < issueCount; i++){
-			
-		}		
+				
 	}
 	
 }
