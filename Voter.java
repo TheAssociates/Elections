@@ -5,6 +5,10 @@ import java.text.*;
 
 public class Voter extends Entity{
 	
+	public Voter(String name, Issue[] views, Nation nation) {
+		super(name, views, nation);
+	}
+	
 	public Party vote() {
 		double maxScore = 0;
 		double maxParty = 0;
