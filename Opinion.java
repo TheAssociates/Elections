@@ -1,3 +1,8 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.text.*;
+
 public class Opinion{
 	
 	public Issue issue; //the issue one has an opinion on
