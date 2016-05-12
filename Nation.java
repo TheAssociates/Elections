@@ -13,7 +13,6 @@ public class Nation{
 			issues[i] = new Issue();
 		}
 		
-		
 		for(int i = 0; i < population; i++){
 			populace[i] = new Voter();
 		}
