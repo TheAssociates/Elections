@@ -1,5 +1,7 @@
 public class Nation{
 	
+	public String name;
+	
 	public Voter[] populace;
 	public Party[] parties;
 	public Issue[] issues;
@@ -8,6 +10,7 @@ public class Nation{
 	public Party[] viable;
 	
 	public Nation(int population, int partyCount, int issueCount){
+		this.name = Phrase.COUNTRY.get();
 		this.populace = new Voter[population];
 		this.parties = new Party[partyCount];
 		this.issues = new Issue[issueCount];
