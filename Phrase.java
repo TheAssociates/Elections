@@ -19,6 +19,7 @@ public enum Phrase { //allows for the easy generation of names
 	TITLE ("/WordList\\titles.txt"),
 	LETTER ("/WordList\\letters.txt"),
 	PLURAL ("/WordList\\plurals.txt"),
+	PARTY ("/WordList\\countries.txt"),
 	COUNTRY ("/WordList\\countries.txt");
 	
 	private String fpath;
@@ -55,6 +56,10 @@ public enum Phrase { //allows for the easy generation of names
 			
 		}
 		return "";	
+	}
+	
+	public String genName(){
+		return TITLE.get("", .3, " ") + SURNAME.get() + " " + NAME.get();
 	}
 	
 	
