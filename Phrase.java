@@ -17,8 +17,8 @@ public enum Phrase { //allows for the easy generation of names
 	NAME ("/WordList\\names.txt"),
 	SURNAME ("/WordList\\surnames.txt"),
 	TITLE ("/WordList\\titles.txt"),
-	LETTER ("/WordList\\letters.txt");
-	
+	LETTER ("/WordList\\letters.txt"),
+	PLURAL ("/WordList\\plurals.txt");
 	
 	private String fpath;
 	private Scanner list;
