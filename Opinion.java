@@ -9,6 +9,4 @@ public class Opinion{
 		this.value = val;
 		this.importance = imp;
 	}
-	
-	
 }
