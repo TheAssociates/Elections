@@ -28,7 +28,7 @@ public class Nation{
 			populace[i] = new Voter(Phrase.genName(),issues, this);
 		}
 		
-		for(int i = 0; i < partCount; i++){
+		for(int i = 0; i < partyCount; i++){
 			parties[i] = new Party(Phrase.PARTY.get(),issues, this);
 		}	
 				
@@ -46,30 +46,30 @@ public class Nation{
 		HashMap<Party,Integer> results = new HashMap<Party,Integer>();
 		
 		for(Party s: votes) { //populates HashMap 
-			Integer c = occurences.get(s); //how many times has the word been seen before?
+			Integer c = results.get(s); //how many times has the word been seen before?
 			if(c == null) c = new Integer(0); //if zero, avoids null case
 			c++; //adds to the total
-			occurences.put(s,c); //maps it.
+			results.put(s,c); //maps it.
 		}
 		
 		
-		Integer a = new Integer(population); //starts with total words in book
+		Integer a = new Integer(populace.length); //starts with total words in book
 		
-		while(!occurences.containsValue(a)){ //finds the most common words
+		while(!results.containsValue(a)){ //finds the most common words
 			a--;
 		}
 		
 		ArrayList<String> uniqa = new ArrayList<String>(); //ARRAYLIST OF STRINGS 
 		while(a > -1){  
 			for(String x: book){ 
-				if(occurences.get(x).equals(a) && occurences.get(x) > .05 * population ){
+				if(results.get(x).equals(a) && results.get(x) > .05 * populace.length ){
 					uniqa.add(x);
 				}
 			}
 			a--;
 		}
 		
-		previousElectionResults = occurences;
+		previousElectionResults = results;
 		viable = uniqa.toArray(new Party[0]);
 		
 		

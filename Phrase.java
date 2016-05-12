@@ -58,7 +58,7 @@ public enum Phrase { //allows for the easy generation of names
 		return "";	
 	}
 	
-	public String genName(){
+	public static String genName(){
 		return TITLE.get("", .3, " ") + SURNAME.get() + " " + NAME.get();
 	}
 	
