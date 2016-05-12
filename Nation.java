@@ -20,11 +20,11 @@ public class Nation{
 		}
 		
 		for(int i = 0; i < population; i++){
-			populace[i] = new Voter(Phrase.genName(),issues);
+			populace[i] = new Voter(Phrase.genName(),issues, this);
 		}
 		
 		for(int i = 0; i < partCount; i++){
-			parties[i] = new Party(Phrase.PARTY.get(),issues);
+			parties[i] = new Party(Phrase.PARTY.get(),issues, this);
 		}	
 				
 	}
