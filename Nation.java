@@ -59,9 +59,9 @@ public class Nation{
 			a--;
 		}
 		
-		ArrayList<String> uniqa = new ArrayList<String>(); //ARRAYLIST OF STRINGS 
+		ArrayList<Party> uniqa = new ArrayList<Party>(); //ARRAYLIST OF STRINGS 
 		while(a > -1){  
-			for(String x: book){ 
+			for(Party x: parties){ 
 				if(results.get(x).equals(a) && results.get(x) > .05 * populace.length ){
 					uniqa.add(x);
 				}
@@ -72,7 +72,7 @@ public class Nation{
 		previousElectionResults = results;
 		viable = uniqa.toArray(new Party[0]);
 		
-		
+		return viable[0];
 	}
 	
 }
