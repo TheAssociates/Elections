@@ -37,14 +37,12 @@ public class Nation{
 	public Party runElection(){ //runs an election, selects winner;
 
 		ArrayList<Party> votes = new ArrayList<Party>();
-		
 		for(Voter x : populace){
 			votes.add(x.vote());
 		}
-		
+		System.out.println(votes);
 		
 		HashMap<Party,Integer> results = new HashMap<Party,Integer>();
-		
 		for(Party s: votes) { //populates HashMap 
 			Integer c = results.get(s); //how many times has the word been seen before?
 			if(c == null) c = new Integer(0); //if zero, avoids null case
@@ -61,8 +59,8 @@ public class Nation{
 		
 		ArrayList<Party> uniqa = new ArrayList<Party>(); //ARRAYLIST OF STRINGS 
 		while(a > -1){  
-			for(Party x: parties){ 
-				if(results.get(x).equals(a) && results.get(x) > .05 * populace.length ){
+			for(Party x: results.keySet()){ 
+				if(results.get(x).equals(a) && x != null){
 					uniqa.add(x);
 				}
 			}
@@ -71,7 +69,6 @@ public class Nation{
 		
 		previousElectionResults = results;
 		viable = uniqa.toArray(new Party[0]);
-		
 		return viable[0];
 	}
 	

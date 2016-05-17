@@ -19,7 +19,7 @@ public enum Phrase { //allows for the easy generation of names
 	TITLE ("/WordList\\titles.txt"),
 	LETTER ("/WordList\\letters.txt"),
 	PLURAL ("/WordList\\plurals.txt"),
-	PARTY ("/WordList\\countries.txt"),
+	PARTY ("/WordList\\parties.txt"),
 	COUNTRY ("/WordList\\countries.txt");
 	
 	private String fpath;

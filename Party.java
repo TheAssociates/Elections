@@ -8,4 +8,8 @@ public class Party extends Entity{
 		super(name, views, nation);
 	}
 	
+	public String toString(){
+		return name;
+	}
+	
 }

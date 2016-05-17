@@ -1,114 +1,115 @@
-Action Party
-National Action Party
-People's Action Party
-Agrarian Party
-Alliance Party
-National Alliance
-New Alliance Party
-Centre Party
-Christian Party
-Christian Democratic Party
-Christian Democratic Union
-Christian People's Party
-Civic Party
-Civic Democratic Party
-Colorado Party
-Communist Party
-Communist League
-International Communist League
-Revolutionary Communist League
-Worker-Communist Party
-Revolutionary Communist Party
-Conservative Party
-Conservative People's Party
-Democratic Party
-Democratic Alliance
-Christian Democratic Party
-Christian Democratic Union
-Civic Democratic Party
-Union of Democratic Forces
-Free Democratic Party
-Democratic Labour Party
-Liberal Democratic Party
-National Democratic Party
-National Democratic Congress
-New Democratic Party
-Democratic People's Party
-Progressive Democratic Party
-Radical Democratic Party
-Social Democratic Party
-Social Democratic Union
-Democratic Socialist Party
-United Democratic Party
-Equality Party
-Fatherland Party
-Fatherland Union
-Union of Democratic Forces
-Free Democratic Party
-Freedom Party
-Green Party
-Independence Party
+Action_Party
+National_Action_Party
+People's_Action_Party
+Agrarian_Party
+Alliance_Party
+National_Alliance
+New_Alliance_Party
+Centre_Party
+Christian_Party
+Christian_Democratic_Party
+Christian_Democratic_Union
+Christian_People's_Party
+Civic_Party
+Civic_Democratic_Party
+Colorado_Party
+Communist_Party
+Communist_League
+International_Communist_League
+Revolutionary_Communist_League
+Worker-Communist_Party
+Revolutionary_Communist_Party
+Conservative_Party
+Conservative_People's_Party
+Democratic_Party
+Democratic_Alliance
+Christian_Democratic_Party
+Christian_Democratic_Union
+Civic_Democratic_Party
+Union_of_Democratic_Forces
+Free_Democratic_Party
+Democratic_Labour_Party
+Liberal_Democratic_Party
+National_Democratic_Party
+National_Democratic_Congress
+New_Democratic_Party
+Democratic_People's_Party
+Progressive_Democratic_Party
+Radical_Democratic_Party
+Social_Democratic_Party
+Social_Democratic_Union
+Democratic_Socialist_Party
+United_Democratic_Party
+Equality_Party
+Fatherland_Party
+Fatherland_Union
+Union_of_Democratic_Forces
+Free_Democratic_Party
+Freedom_Party
+Green_Party
+Independence_Party
 International
-Industrial Workers of the World
-Labour Party
-Democratic Labour Party
-Socialist Labour Party
-Left Party
-United Left
-Liberal Party
-Liberal Democratic Party
-National Liberal Party
-Radical Liberal Party
-Social Liberal Party
-Libertarian Party
-Motherland Party
-National Party, National Front
-National Congress
-National Alliance
-National Democratic Party
-National Democratic Congress
-National Liberal Party
-New National Party
-National Socialist Party
-National Unity Party
-New Party
-New Alliance Party
-New Democratic Party
-New National Party
-People's Party
-Christian People's Party
-Conservative People's Party
-Democratic People's Party
-Liberal People's Party
-Republican People's Party
-Popular Party
-Popular Alliance
-Pirate Party
-Progressive Party
-Progressive Democratic Party
-Radical Party
-Radical Democratic Party
-Left Radical Party
-Reform Party
-Republican Party
-Republican People's Party
-Revolutionary Party
-Revolutionary Communist Party
-Social Democratic Party
-Social Democratic Union
-Socialist Party
-Democratic Socialist Party
-Socialist Labour Party
-National Socialist Party
-Socialist Workers Party
-Unionist Party
-Unity Party, United Party
-United Left
-National Unity Party
-United Democratic Party
-United Workers' Party
-Workers' Party
-Socialist Workers' Party
-United Workers' Party
-Worker-Communist Party
-Workers' League
+Industrial_Workers_of_the_World
+Labour_Party
+Democratic_Labour_Party
+Socialist_Labour_Party
+Left_Party
+United_Left
+Liberal_Party
+Liberal_Democratic_Party
+National_Liberal_Party
+Radical_Liberal_Party
+Social_Liberal_Party
+Libertarian_Party
+Motherland_Party
+National_Party,_National_Front
+National_Congress
+National_Alliance
+National_Democratic_Party
+National_Democratic_Congress
+National_Liberal_Party
+New_National_Party
+National_Socialist_Party
+National_Unity_Party
+New_Party
+New_Alliance_Party
+New_Democratic_Party
+New_National_Party
+People's_Party
+Christian_People's_Party
+Conservative_People's_Party
+Democratic_People's_Party
+Liberal_People's_Party
+Republican_People's_Party
+Popular_Party
+Popular_Alliance
+Pirate_Party
+Progressive_Party
+Progressive_Democratic_Party
+Radical_Party
+Radical_Democratic_Party
+Left_Radical_Party
+Reform_Party
+Republican_Party
+Republican_People's_Party
+Revolutionary_Party
+Revolutionary_Communist_Party
+Social_Democratic_Party
+Social_Democratic_Union
+Socialist_Party
+Democratic_Socialist_Party
+Socialist_Labour_Party
+National_Socialist_Party
+Socialist_Workers_Party
+Unionist_Party
+Unity_Party,_United_Party
+United_Left
+National_Unity_Party
+United_Democratic_Party
+United_Workers'_Party
+Workers'_Party
+Socialist_Workers'_Party
+United_Workers'_Party
+Worker-Communist_Party
+Workers'_League
+GOD_EMPEROR_DONALD_TRUMP_4_PRESIDENT

@@ -10,7 +10,7 @@ public class Voter extends Entity{
 	}
 	
 	public Party vote() {
-		double maxScore = 0;
+		double maxScore = -1*Double.MAX_VALUE;
 		Party maxParty = null;
 		
 		for(int i = 0; i < this.nation.parties.length; i++) {
@@ -56,4 +56,6 @@ public class Voter extends Entity{
 		score = whim*natVote*(avgAllign-penalty);
 		return score;
 	}
+	
+	
 }
