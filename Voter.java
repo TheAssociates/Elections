@@ -53,7 +53,7 @@ public class Voter extends Entity{
 			natVote = 1;
 		}
 		
-		score = whim*natVote*(avgAllign-penalty);
+		score = whim*(avgAllign-penalty);
 		return score;
 	}
 	

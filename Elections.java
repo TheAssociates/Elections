@@ -22,7 +22,7 @@ public class Elections{
 		while(natl.viable == null || natl.viable.length > 2){
 			
 			Party winner = natl.runElection();
-			System.out.println(Arrays.deepToString(natl.viable));
+			//System.out.println(Arrays.deepToString(natl.viable));
 			System.out.println(winner.toString());
 			
 		}

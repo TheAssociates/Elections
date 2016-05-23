@@ -40,7 +40,7 @@ public class Nation{
 		for(Voter x : populace){
 			votes.add(x.vote());
 		}
-		System.out.println(votes);
+		//System.out.println(votes);
 		
 		HashMap<Party,Integer> results = new HashMap<Party,Integer>();
 		for(Party s: votes) { //populates HashMap 
