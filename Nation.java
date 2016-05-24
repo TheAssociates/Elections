@@ -36,40 +36,32 @@ public class Nation{
 	
 	public Party runElection(){ //runs an election, selects winner;
 
-		ArrayList<Party> votes = new ArrayList<Party>();
+		
+		Set<Party> partySet = new TreeSet<Party>();
+		
 		for(Voter x : populace){
-			votes.add(x.vote());
-		}
-		//System.out.println(votes);
-		
-		HashMap<Party,Integer> results = new HashMap<Party,Integer>();
-		for(Party s: votes) { //populates HashMap 
-			Integer c = results.get(s); //how many times has the word been seen before?
-			if(c == null) c = new Integer(0); //if zero, avoids null case
-			c++; //adds to the total
-			results.put(s,c); //maps it.
+			Party temp = x.vote();
+			temp.recieveVote();
+			partySet.add(temp);
 		}
 		
 		
-		Integer a = new Integer(populace.length); //starts with total words in book
 		
-		while(!results.containsValue(a)){ //finds the most common words
-			a--;
+		previousElectionResults = new HashMap<Party,Integer>();
+		for(Party x : partySet){
+			previousElectionResults.put(x,new Integer(x.VotesForMe));
 		}
 		
-		ArrayList<Party> uniqa = new ArrayList<Party>(); //ARRAYLIST OF STRINGS 
-		while(a > -1){  
-			for(Party x: results.keySet()){ 
-				if(results.get(x).equals(a) && x != null){
-					uniqa.add(x);
-				}
-			}
-			a--;
-		}
+		int tt = 0;
 		
-		previousElectionResults = results;
-		viable = uniqa.toArray(new Party[0]);
-		return viable[0];
+		do{
+			
+		} while 
+		
+		
+		
+		
+		
 	}
 	
 }

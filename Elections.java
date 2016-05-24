@@ -19,10 +19,10 @@ public class Elections{
 		Nation natl = new Nation(POPULATION, PARTYCOUNT, ISSUECOUNT);
 		
 		
-		while(natl.viable == null || natl.viable.length > 2){
+		while(natl.viable == null || natl.viable.length > 1){
 			
 			Party winner = natl.runElection();
-			//System.out.println(Arrays.deepToString(natl.viable));
+			System.out.println(natl.viable.length);
 			System.out.println(winner.toString());
 			
 		}
