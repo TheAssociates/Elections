@@ -47,7 +47,7 @@ public class Voter extends Entity{
 		}
 		
 		Random rand = new Random();
-		double whim = random(rand, 70, 100)/10;
+		double whim = random(rand, 70, 100)/100;
 		
 		if (this.nation.previousElectionResults == null) {
 			natVote = 1;
@@ -56,6 +56,6 @@ public class Voter extends Entity{
 		score = whim*(avgAllign-penalty);
 		return score;
 	}
-	
+	`
 	
 }
