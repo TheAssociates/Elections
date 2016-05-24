@@ -56,6 +56,4 @@ public class Voter extends Entity{
 		score = whim*(avgAllign-penalty);
 		return score;
 	}
-	`
-	
 }
