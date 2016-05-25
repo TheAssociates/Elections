@@ -46,7 +46,7 @@ public class Voter extends Entity{
 		}
 		avgAllign = allAllign/this.views.size();
 		
-		double whim = random(Elections.SUPER_RAND, 70, 100)/100;
+		double whim = random(Elections.SUPER_RAND, 90, 100)/100;
 		
 		if (this.nation.previousElectionResults == null) {
 			natVote = 1;
@@ -54,7 +54,7 @@ public class Voter extends Entity{
 			natVote = this.nation.previousElectionResults.get(party);
 		}
 		
-		score = ((avgAllign+penalty)*(natVote + (this.nation.populace.length / 1.25)));
+		score = whim*((avgAllign+penalty)*(natVote + (this.nation.populace.length / 1.25)));
 		return score;
 	}
 }
