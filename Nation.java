@@ -9,6 +9,7 @@ public class Nation{
 	
 	public Voter[] populace;
 	public Party[] parties;
+	public double[] partyScores; 
 	public Issue[] issues;
 	
 	public HashMap<Party,Integer> previousElectionResults = null;
@@ -18,6 +19,7 @@ public class Nation{
 		this.name = Phrase.COUNTRY.get();
 		this.populace = new Voter[population];
 		this.parties = new Party[partyCount];
+		this.partyScores = new double[partyCount]; 
 		this.issues = new Issue[issueCount];
 		
 		for(int i = 0; i < issueCount; i++){
