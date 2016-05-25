@@ -59,8 +59,8 @@ public class Voter extends Entity{
 		}
 		
 		double fingerTax = 1;
-		if (LASTWINNER != null) {
-			fingerTax = fingerTax - .1*REIGN;
+		if (Elections.LASTWINNER != null) {
+			fingerTax = fingerTax - .1*Elections.REIGN;
 		}
 		
 		score = ((whim*((400-avgAllign)+penalty)*(natVote + (this.nation.populace.length / 1.25))));
