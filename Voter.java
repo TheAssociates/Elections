@@ -14,8 +14,8 @@ public class Voter extends Entity{
 		Party maxParty = null;
 		
 		for(int i = 0; i < this.nation.parties.length; i++) {
-			score = score(this.nation.parties[i]);
-			Nation.partyScores[i] = Nation.partyScores[i] + score;
+			double score = score(this.nation.parties[i]);
+			nation.partyScores[i] = nation.partyScores[i] + score;
 			
 			if ( score > maxScore) {
 				maxScore = score;
