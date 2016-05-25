@@ -11,13 +11,13 @@ public class Elections{
 	public static final Random SUPER_SUPER_RAND = new Random();
 	public static final long SEED = SUPER_SUPER_RAND.nextLong();
 	public static final Random SUPER_RAND = new Random(SEED);
-	
+	public static final double VIABILITY = 0.1;
 	public static int REIGN = 0;
 	public static Party LASTWINNER = null;
 	public static final Party[] typecast = new Party[0];
+	//SUPER_SUPER_RAND.nextLong();
 	
-	
-	public static void main(String[]arg){
+	public static void main(String[]arg) throws IOException {
 		
 		System.out.println(SEED);
 		
@@ -28,6 +28,7 @@ public class Elections{
 		
 		Nation natl = new Nation(POPULATION, PARTYCOUNT, ISSUECOUNT);
 		
+		int electionCounter = 0;
 		
 		while((natl.viable == null || natl.viable.length > 1) && REIGN < 5){
 			int totVotes = 0;
@@ -46,8 +47,11 @@ public class Elections{
 			}
 			System.out.println(winner.toString() + " WINS with " + natl.previousElectionResults.get(winner) + " votes");
 			System.out.println(totVotes + " Total Votes");
-			System.out.println("");
 			natl.partyScores = new double[PARTYCOUNT];
+			electionCounter++;
+			System.out.println(electionCounter);
+			System.out.println("");
+			System.in.read();
 		}
 		
 		
