@@ -34,6 +34,7 @@ public class Elections{
 			int totVotes = 0;
 			Party winner = natl.runElection();
 			if(winner == LASTWINNER) REIGN++;
+			else REIGN = 0;
 			LASTWINNER = winner;
 			
 			System.out.println(natl.viable.length );
@@ -41,7 +42,7 @@ public class Elections{
 			for(Party x : natl.parties){
 				
 				int votes =  (natl.previousElectionResults.get(x) == null) ? 0 : natl.previousElectionResults.get(x); 
-				System.out.println(x.toString() + " with " + votes + " votes and an average score of " + natl.partyScores[counterint]/POPULATION);
+				System.out.println(x.toString() + " with " + votes + " votes and an average score of " + natl.partyScores[counterint]/natl.previousElectionResults.get(x));
 				totVotes = totVotes + votes;
 				counterint = counterint + 1;
 			}
