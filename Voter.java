@@ -54,7 +54,7 @@ public class Voter extends Entity{
 			natVote = this.nation.previousElectionResults.get(party);
 		}
 		
-		score = (avgAllign+penalty)*natVote;
+		score = ((avgAllign+penalty)*(natVote + (this.nation.populace.length / 1.25)));
 		return score;
 	}
 }
