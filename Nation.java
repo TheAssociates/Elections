@@ -37,28 +37,36 @@ public class Nation{
 	public Party runElection(){ //runs an election, selects winner;
 
 		
-		Set<Party> partySet = new TreeSet<Party>();
+		TreeSet<Party> partySet = new TreeSet<Party>();
 		
 		for(Voter x : populace){
 			Party temp = x.vote();
 			temp.recieveVote();
-			partySet.add(temp);
+		}
+		
+		for(Party x : parties){
+			partySet.add(x);
 		}
 		
 		
 		
 		previousElectionResults = new HashMap<Party,Integer>();
-		for(Party x : partySet){
+		for(Party x : parties){
 			previousElectionResults.put(x,new Integer(x.VotesForMe));
 		}
+	
 		
-		int tt = 0;
+		while(partySet.first().VotesForMe < populace.length * 0.05){
+			partySet.pollFirst();
+		}
 		
-		do{
-			
-		} while 
+		viable = partySet.descendingSet().toArray(Elections.typecast);
 		
+		for(Party x : parties){
+			x.forget();
+		}
 		
+		return partySet.last();
 		
 		
 		

@@ -3,7 +3,7 @@ import java.lang.*;
 import java.io.*;
 import java.text.*;
 
-public class Party extends Entity{
+public class Party extends Entity implements Comparable{
 	
 	public int VotesForMe = 0;
 	
@@ -19,8 +19,8 @@ public class Party extends Entity{
 		VotesForMe++;
 	}
 	
-	public int compareTo(Party other){
-		return this.VotesForMe - other.VotesForMe;
+	public int compareTo(Object other){
+		return this.VotesForMe - ((Party) other).VotesForMe;
 	}
 	
 	public void forget(){
