@@ -11,8 +11,9 @@ public class Elections{
 	public static final Random SUPER_SUPER_RAND = new Random();
 	public static final long SEED = SUPER_SUPER_RAND.nextLong();
 	public static final Random SUPER_RAND = new Random(SEED);
-	public static int REIGN = 0;
 	
+	public static int REIGN = 0;
+	public static Party LASTWINNER = null;
 	public static final Party[] typecast = new Party[0];
 	
 	
@@ -27,13 +28,12 @@ public class Elections{
 		
 		Nation natl = new Nation(POPULATION, PARTYCOUNT, ISSUECOUNT);
 		
-		Party lastWinner = null;
 		
 		while((natl.viable == null || natl.viable.length > 1) && REIGN < 5){
 			int totVotes = 0;
 			Party winner = natl.runElection();
-			if(winner == lastWinner) REIGN++;
-			lastWinner = winner;
+			if(winner == LASTWINNER) REIGN++;
+			LASTWINNER = winner;
 			
 			System.out.println(natl.viable.length );
 			for(Party x : natl.parties){
