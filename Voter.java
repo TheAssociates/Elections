@@ -32,7 +32,7 @@ public class Voter extends Entity{
 		
 		for (int i = 0; i < this.views.size(); i++) {
 			allign = 0;
-			allign = ((this.views.get(i).value - party.views.get(i).value)*(this.views.get(i).importance / 50));
+			allign = ((this.views.get(i).value - party.views.get(i).value)*((this.views.get(i).importance * 1.0) / 50));
 			allAllign += allign;
 			if (allign > 75) {
 				penalty -= 10;
@@ -52,7 +52,7 @@ public class Voter extends Entity{
 			natVote = 1;
 		}
 		
-		score = whim*(avgAllign-penalty);
+		score = whim*(avgAllign);
 		return score;
 	}
 }
