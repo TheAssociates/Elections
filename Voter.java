@@ -30,6 +30,7 @@ public class Voter extends Entity{
 		double allign = 0;
 		double natVote = 0;
 		
+		
 		for (int i = 0; i < this.views.size(); i++) {
 			allign = 0;
 			allign = Math.abs(((this.views.get(i).value - party.views.get(i).value)*((this.views.get(i).importance * 1.0) / 50)));
@@ -46,7 +47,7 @@ public class Voter extends Entity{
 		}
 		avgAllign = allAllign/this.views.size();
 		
-		double whim = random(Elections.SUPER_RAND, 90, 100)/100;
+		double whim = random(Elections.SUPER_RAND, 85, 115)/100;
 		
 		if (this.nation.previousElectionResults == null) {
 			natVote = 1;
@@ -54,7 +55,12 @@ public class Voter extends Entity{
 			natVote = this.nation.previousElectionResults.get(party);
 		}
 		
-		score = whim*((avgAllign+penalty)*(natVote + (this.nation.populace.length / 1.25)));
+		double fingerTax = 1;
+		if (LASTWINNER != null) {
+			fingerTax = fingerTax - .1*REIGN;
+		}
+		
+		score = ((whim*((400-avgAllign)+penalty)*(natVote + (this.nation.populace.length / 1.25))));
 		return score;
 	}
 }
