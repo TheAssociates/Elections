@@ -40,17 +40,17 @@ public class Voter extends Entity{
 			allAllign += allign;
 			if (allign > 75) {
 				penalty -= 10;
-			} else if (allign > 100) {
+			} if (allign > 100) {
 				penalty -= 25;
-			} else if (allign > 125) {
+			} if (allign > 125) {
 				penalty -= 50;
-			} else if (allign > 199) {
+			} if (allign > 199) {
 				penalty -= 200;
 			}
 		}
 		avgAllign = allAllign/this.views.size();
 		
-		double whim = random(Elections.SUPER_RAND, 80, 120)/100;
+		double whim = random(Elections.SUPER_RAND, Elections.WHIM_MIN, Elections.WHIM_MAX)/100;
 		
 		if (this.nation.previousElectionResults == null) {
 			natVote = 1;
@@ -60,14 +60,14 @@ public class Voter extends Entity{
 		
 		double fingerTax = 1;
 		if (Elections.LASTWINNER == party) {
-			fingerTax = 1 - .1*Elections.REIGN;
+			fingerTax = 1 - Elections.FINGERTAX*Elections.REIGN;
 		}
 		
 		
 		score = (fingerTax*(whim*((400-avgAllign)+penalty)*(natVote + (this.nation.populace.length / 2))));
 		
 		if (natVote/this.nation.populace.length < Elections.VIABILITY) {
-			score = score*0.1;
+			score = score*Elections.POORTAX;
 		}
 		
 		return score;

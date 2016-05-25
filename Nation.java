@@ -58,7 +58,7 @@ public class Nation{
 		}
 	
 		
-		while(partySet.first().VotesForMe < populace.length * 0.05){
+		while(partySet.first().VotesForMe < populace.length * Elections.VIABILITY){
 			partySet.pollFirst();
 		}
 		

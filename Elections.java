@@ -4,17 +4,33 @@ import java.io.*;
 import java.text.*;
 
 public class Elections{
+
+	public static final Random SUPER_SUPER_RAND = new Random();
+	public static final long SEED = SUPER_SUPER_RAND.nextLong();
+	public static final Random SUPER_RAND = new Random(SEED);
+
+	
+	public static final double VIABILITY = 0.1;
+	public static final double POORTAX = 0.1;
+	public static final double FINGERTAX = 0;
+	public static final int WHIM_MIN = 80;
+	public static final int WHIM_MAX = 120;
+	
+	
 	
 	public static int POPULATION;
 	public static int PARTYCOUNT;
 	public static int ISSUECOUNT;
-	public static final Random SUPER_SUPER_RAND = new Random();
-	public static final long SEED = SUPER_SUPER_RAND.nextLong();
-	public static final Random SUPER_RAND = new Random(SEED);
-	public static final double VIABILITY = 0.1;
+
+	
 	public static int REIGN = 0;
 	public static Party LASTWINNER = null;
 	public static final Party[] typecast = new Party[0];
+	
+	
+	
+	
+	
 	//SUPER_SUPER_RAND.nextLong();
 	
 	public static void main(String[]arg) throws IOException {
