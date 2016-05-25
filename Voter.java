@@ -46,8 +46,8 @@ public class Voter extends Entity{
 			avgAllign = allAllign/this.views.size();
 		}
 		
-		Random rand = new Random();
-		double whim = random(rand, 70, 100)/100;
+		
+		double whim = random(Elections.SUPER_RAND, 70, 100)/100;
 		
 		if (this.nation.previousElectionResults == null) {
 			natVote = 1;

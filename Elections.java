@@ -8,7 +8,7 @@ public class Elections{
 	public static int POPULATION;
 	public static int PARTYCOUNT;
 	public static int ISSUECOUNT;
-	
+	public static final Random SUPER_RAND = new Random(3141592);
 	
 	public static final Party[] typecast = new Party[0];
 	

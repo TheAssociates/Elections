@@ -13,9 +13,8 @@ public class Entity{
 		this.name = name;
 		this.nation = nation;
 		this.views = new ArrayList<Opinion>();
-		Random rand = new Random();
 		for (int i = 0; i < views.length; i++) {
-			this.views.add(new Opinion(views[i], random(rand, -100, 100), random(rand, 1, 100)));
+			this.views.add(new Opinion(views[i], random(Elections.SUPER_RAND, -100, 100), random(Elections.SUPER_RAND, 1, 100)));
 		}
 	}
 	

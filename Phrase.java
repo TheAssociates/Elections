@@ -46,7 +46,7 @@ public enum Phrase { //allows for the easy generation of names
 	}
 	
 	public String get(String imp, double chance,String end){ //has a chance of returning the leading string, tailing string, and PHRASE type
-		if(rand.nextFloat() < chance){
+		if(Elections.SUPER_RAND.nextFloat() < chance){
 			try{
 				imp = imp + nthString(random(rand,0,num)) + end;
 				return imp;
@@ -113,6 +113,6 @@ public enum Phrase { //allows for the easy generation of names
 	}
 	
 	public int random(Random rand,int num1,int num2){  //returns a random value between num1 and num2 (inclusive)
-		return(num1 -1 + (int)Math.ceil(rand.nextDouble()*(num2-num1+1)));
+		return(num1 -1 + (int)Math.ceil(Elections.SUPER_RAND.nextDouble()*(num2-num1+1)));
 	}
 }
