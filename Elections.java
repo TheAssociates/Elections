@@ -47,7 +47,7 @@ public class Elections{
 			System.out.println(winner.toString() + " WINS with " + natl.previousElectionResults.get(winner) + " votes");
 			System.out.println(totVotes + " Total Votes");
 			System.out.println("");
-			
+			natl.partyScores = new double[PARTYCOUNT];
 		}
 		
 		
