@@ -43,11 +43,11 @@ public class Voter extends Entity{
 			} else if (allign > 199) {
 				penalty -= 200;
 			}
-			avgAllign = allAllign/this.views.size();
 		}
+		avgAllign = allAllign/this.views.size();
 		
-		
-		double whim = random(Elections.SUPER_RAND, 70, 100)/100;
+		Random rand = new Random();
+		double whim = random(rand, 70, 100)/100;
 		
 		if (this.nation.previousElectionResults == null) {
 			natVote = 1;
