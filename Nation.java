@@ -9,8 +9,11 @@ public class Nation{
 	
 	public Voter[] populace;
 	public Party[] parties;
+	public Party[] losers;
+	public Party[] winners;
 	public double[] partyScores; 
 	public Issue[] issues;
+	public TreeSet<Party> partySet;
 	
 	public HashMap<Party,Integer> previousElectionResults = null;
 	public Party[] viable;
@@ -33,13 +36,21 @@ public class Nation{
 		for(int i = 0; i < partyCount; i++){
 			parties[i] = new Party(Phrase.PARTY.get(),issues, this);
 		}	
-				
+	}
+	
+	public boolean arrContain(Party[] arr, Party party) {
+		for (Party x : arr) {
+			if (x == party) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public Party runElection(){ //runs an election, selects winner;
 
 		
-		TreeSet<Party> partySet = new TreeSet<Party>();
+		partySet = new TreeSet<Party>();
 		
 		for(Voter x : populace){
 			Party temp = x.vote();
@@ -58,7 +69,7 @@ public class Nation{
 		}
 	
 		
-		while(partySet.first().VotesForMe < populace.length * Elections.VIABILITY){
+		while((partySet.size() != 0) && (partySet.first().VotesForMe < populace.length * Elections.VIABILITY)){
 			partySet.pollFirst();
 		}
 		
@@ -67,7 +78,7 @@ public class Nation{
 		for(Party x : parties){
 			x.forget();
 		}
-		
+
 		return partySet.last();
 		
 		

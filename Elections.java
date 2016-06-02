@@ -10,9 +10,9 @@ public class Elections{
 	public static final Random SUPER_RAND = new Random(SEED);
 
 	
-	public static final double VIABILITY = 0.1;
-	public static final double POORTAX = 0.1;
-	public static final double FINGERTAX = 0;
+	public static final double VIABILITY = 0.05;
+	public static final double POORTAX = -10000000;
+	public static final double FINGERTAX = 0.05;
 	public static final int WHIM_MIN = 80;
 	public static final int WHIM_MAX = 120;
 	
@@ -22,7 +22,7 @@ public class Elections{
 	public static int PARTYCOUNT;
 	public static int ISSUECOUNT;
 
-	
+	public static int IMPORTANTINT = 1;
 	public static int REIGN = 0;
 	public static Party LASTWINNER = null;
 	public static final Party[] typecast = new Party[0];
@@ -58,7 +58,7 @@ public class Elections{
 			for(Party x : natl.parties){
 				
 				int votes =  (natl.previousElectionResults.get(x) == null) ? 0 : natl.previousElectionResults.get(x); 
-				System.out.println(x.toString() + " with " + votes + " votes and an average score of " + natl.partyScores[counterint]/natl.previousElectionResults.get(x));
+				System.out.println(x.toString() + " with " + votes + " votes");// and an average score of " + natl.partyScores[counterint]/natl.previousElectionResults.get(x));
 				totVotes = totVotes + votes;
 				counterint = counterint + 1;
 			}

@@ -66,7 +66,16 @@ public class Voter extends Entity{
 		
 		score = (fingerTax*(whim*((400-avgAllign)+penalty)*(natVote + (this.nation.populace.length / 2))));
 		
-		if (natVote/this.nation.populace.length < Elections.VIABILITY) {
+		boolean inPartySet = false;
+		
+		for (Party x : this.nation.partySet) {
+			if (x == party) {
+				inPartySet = true;
+				break;
+			}
+		}
+		
+		if (inPartySet) {
 			score = score*Elections.POORTAX;
 		}
 		
