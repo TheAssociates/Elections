@@ -22,6 +22,7 @@ public class Elections{
 	public static int PARTYCOUNT;
 	public static int ISSUECOUNT;
 
+	public static int IMPORTANTRUN = 30;
 	public static int IMPORTANTINT = 1;
 	public static int REIGN = 0;
 	public static Party LASTWINNER = null;
@@ -46,9 +47,10 @@ public class Elections{
 		
 		int electionCounter = 0;
 		
-		while((natl.viable == null || natl.viable.length > 1) && REIGN < 5){
+		while((natl.viable == null || natl.viable.length > 1) && REIGN < 10 && electionCounter < IMPORTANTRUN){
 			int totVotes = 0;
-			Party winner = natl.runElection();
+			electionCounter++;
+			Party winner = natl.runElection(electionCounter);
 			if(winner == LASTWINNER) REIGN++;
 			else REIGN = 0;
 			LASTWINNER = winner;
@@ -61,11 +63,12 @@ public class Elections{
 				System.out.println(x.toString() + " with " + votes + " votes");// and an average score of " + natl.partyScores[counterint]/natl.previousElectionResults.get(x));
 				totVotes = totVotes + votes;
 				counterint = counterint + 1;
+				if (votes == 100) {break;}
+				if (natl.parties.length == 2) {break;}
 			}
 			System.out.println(winner.toString() + " WINS with " + natl.previousElectionResults.get(winner) + " votes");
 			System.out.println(totVotes + " Total Votes");
 			natl.partyScores = new double[PARTYCOUNT];
-			electionCounter++;
 			System.out.println(electionCounter);
 			System.out.println("");
 			System.in.read();
